@@ -1,0 +1,39 @@
+@import 'base/imports';
+
+html {
+  height: 100%;
+  overflow-x: hidden;
+
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  body {
+    height: 100%;
+    background-color: $grey-bg;
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      outline: none;
+      font-family: $primary-font;
+    }
+  }
+}
+
+.fill-primary-color {
+  fill: $primary-color;
+}
+
+.fill-primary-color-light {
+  fill: $primary-color-light;
+}
+
+.fill-secondary-color {
+  fill: $secondary-color;
+}
