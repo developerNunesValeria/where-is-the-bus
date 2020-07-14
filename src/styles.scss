@@ -4,13 +4,6 @@ html {
   height: 100%;
   overflow-x: hidden;
 
-  ul,
-  li {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-
   body {
     height: 100%;
     background-color: $grey-bg;
@@ -24,16 +17,46 @@ html {
       font-family: $primary-font;
     }
   }
-}
+  
+  .container {
+    @include max-mobile {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
 
-.fill-primary-color {
-  fill: $primary-color;
-}
+  .main-content {
+    border-radius: 8px;
+    background-color: $white;
+    padding: 16px;
+    position: relative;
+    top: -70px;
+    box-shadow: 0 0 10px 0 rgba($color: $black, $alpha: .02);
+    min-height: 450px;
 
-.fill-primary-color-light {
-  fill: $primary-color-light;
-}
+    @include sm {
+      padding: 24px;
+    }
 
-.fill-secondary-color {
-  fill: $secondary-color;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &.transparent {
+      background-color: transparent;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    & > app-absolute-loader {
+      [data-component='absolute-loader'] {
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .btn-primary {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
 }

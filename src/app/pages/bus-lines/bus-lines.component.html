@@ -1,0 +1,44 @@
+<div data-component="bus-lines">
+  <app-page-header title="Linhas de ônibus e lotação" [breadcrumb]="breadcrumb">
+  </app-page-header>
+
+  <div class="container">
+    <div class="main-content">
+      <span  class="error"></span>
+      <div *ngIf="error" class="alert alert-danger">
+        <strong>Erro!</strong> {{ error }}
+      </div>
+      <mat-tab-group>
+        <mat-tab label="Ônibus">     
+          <app-main-table *ngIf="busListLines && busListLines.length && !itinerary.bus.show" 
+            [data]="busListLines"         
+            (action)="onItineraryBusClick($event)"
+          ></app-main-table>
+          <div *ngIf="itinerary.bus.show" >
+            <button mat-button class="btn btn-primary" type="button" (click)="itinerary.bus.show = false">
+              Voltar
+            </button>
+            <app-map
+              [itinerary]="itinerary.bus.data"
+            ></app-map>
+          </div>
+        </mat-tab>
+        <mat-tab label="Lotação">           
+          <app-main-table *ngIf="capacityListLines && capacityListLines.length && !itinerary.capacity.show"
+            [data]="capacityListLines"
+            (action)="onItineraryCapacityClick($event)"
+          ></app-main-table>
+          <div *ngIf="itinerary.capacity.show" >
+            <button mat-button class="btn btn-primary" type="button" (click)="itinerary.capacity.show = false">
+              Voltar
+            </button>
+            <app-map
+              [itinerary]="itinerary.capacity.data"
+            ></app-map>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+      <mat-spinner *ngIf="isLoading"></mat-spinner>
+    </div>
+  </div>
+</div>

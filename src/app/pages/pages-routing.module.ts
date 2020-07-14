@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { BusLinesComponent } from './bus-lines/bus-lines.component';
 
 
 const routes: Route[] = [
   {
-    path: '', redirectTo: 'home', pathMatch: 'full'
+    path: '', redirectTo: 'linhas', pathMatch: 'full'
   },
   {
-    path: 'home', component: HomeComponent
+    path: 'linhas', component: BusLinesComponent
   }
 ];
 

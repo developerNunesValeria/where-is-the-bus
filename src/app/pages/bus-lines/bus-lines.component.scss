@@ -1,0 +1,29 @@
+@import 'base/imports';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+[data-component='bus-lines'] {
+  .mat-tab-group {
+    .mat-tab-body {
+      padding: 30px 10px;
+    }
+
+    &.mat-primary .mat-ink-bar {
+      background-color: $secondary-color;
+    }
+  }
+
+  .mat-spinner {
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    z-index: 99;
+
+    circle {
+      stroke: $secondary-color;
+    }
+  }
+  
+  .error {
+    color: $error;
+  }
+} 

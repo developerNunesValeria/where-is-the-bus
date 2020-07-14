@@ -1,4 +1,9 @@
 @import 'base/imports';
 
 [data-component='header'] {
+    background-color: $primary-color;
+
+    .navbar-brand, .nav-link {
+        color: $white;
+    }
 }

@@ -1,0 +1,12 @@
+@import 'base/imports';
+
+[data-component='map'] {
+  .title {
+    font-size: 30px;
+    margin: 30px 0;
+  }
+  agm-map {
+    height: 500px;
+  }
+
+}
