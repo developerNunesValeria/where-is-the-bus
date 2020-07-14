@@ -1,0 +1,12 @@
+<ul data-component="breadcrumb" class="d-none d-sm-flex">
+  <li class="item home">
+    <a [routerLink]="['/']">
+      <mat-icon class="home-icon">house</mat-icon>
+    </a>
+  </li>
+
+  <li class="item" *ngFor="let item of breadcrumb; let last = last">
+    <mat-icon class="arrow">double_arrow</mat-icon>
+    <a [routerLink]="item.url" [class.active]="last">{{ item.title }}</a>
+  </li>
+</ul>

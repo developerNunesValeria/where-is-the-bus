@@ -1,0 +1,25 @@
+@import 'base/imports';
+
+[data-component='main-table'] {
+  .mat-form-field {
+    width: 100%;
+
+    @include sm {
+      width: 40%;
+    }
+
+  }
+
+  table {
+    width: 100%;
+
+    .link {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  agm-map {
+    height: 300px;
+  }
+}

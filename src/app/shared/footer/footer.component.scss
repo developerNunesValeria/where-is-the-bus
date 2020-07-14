@@ -1,5 +1,6 @@
 @import 'base/imports';
 
 [data-component='footer'] {
-
+    background-color: $primary-color;
+    height: 50px;
 }

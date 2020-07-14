@@ -9,7 +9,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 export class HeaderComponent implements OnInit {
 
-  constructor( ) { }
+  constructor() {}
 
   ngOnInit() {
   }
